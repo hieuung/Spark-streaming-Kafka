@@ -1,0 +1,2 @@
+./bin/flink run -py ./app/flink-consumer.py --jarfile ./app/external_jars/flink-sql-connector-kafka-3.1.0-1.18.jar
+./bin/flink run -py ./app/test-stream.py --jarfile ./app/external_jars/flink-sql-connector-kafka-3.1.0-1.18.jar

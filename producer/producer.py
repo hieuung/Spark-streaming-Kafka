@@ -2,6 +2,7 @@
 from kafka import KafkaProducer
 import logging
 import time
+import json
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -31,11 +32,11 @@ if __name__ == '__main__':
             "type" : type,
             "timestamp" : now,
         }
-        
+        payload_dump = json.dumps(payload, ensure_ascii=False)
         try:
             producer.send('hieuung', 
                         key= bytes(type, encoding= 'utf-8'),
-                        value= bytes(str(payload), encoding= 'utf-8'), 
+                        value= bytes(payload_dump, encoding= 'utf-8'), 
                         partition= i % 2)
             logger.info("published!")
         except Exception as e:
