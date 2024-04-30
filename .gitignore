@@ -1,4 +1,4 @@
 /spark-node/apache-spark.tgz
-.vscode
 
-/flink-streaming/external_jars/flink-sql-connector-kafka-3.1.0-1.18.jar
+/flink-streaming/external_jars/*
+.vscode
