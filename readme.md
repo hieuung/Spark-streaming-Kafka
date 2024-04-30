@@ -52,6 +52,10 @@ docker exec -it spark-master /bin/sh
 ### STREAMING WITH APACHE FLINK. 
 
 #### Setup long-running Flink-cluster.
+##### Download essential `external_jars` 
+```
+    flink-sql-connector-kafka-3.1.0-1.18.jar
+```
 ##### Build pyflink docker image
 ```sh
 docker build --tag pyflink:latest ./pyflink
