@@ -83,10 +83,12 @@ docker exec -it streaming-kakfa_jobmanager_1 /bin/sh
 
 #### Verify Flink cluster on [Flink-ui](http://localhost:8081)
 
-#### Submit job
+#### Submit Beam job to cluster
 ```sh
-./bin/flink run -py ./app/flink-consumer.py \ 
---jarfile ./app/external_jars/flink-sql-connector-kafka-3.1.0-1.18.jar
+python3 beam-consumer.py --runner FlinkRunner \
+                        --bootstrap_servers localhost:9092 \
+                        --topics hieuung \
+                        --flink_master localhost:8081 \
 ```
 
 #### Verify Flink job on [Flink-ui](http://localhost:8081)
