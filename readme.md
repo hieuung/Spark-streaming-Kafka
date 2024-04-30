@@ -20,7 +20,8 @@ docker-compose up -d producer
 ```
 Verify message on [Kafka-ui](http://localhost:8080)
 
-### STREAMING WITH APACHE SPARK. Setup long-running spark-cluster.
+### STREAMING WITH APACHE SPARK. 
+#### Setup long-running spark-cluster.
 ```sh
 docker-compose up -d spark-master spark-worker
 ```
